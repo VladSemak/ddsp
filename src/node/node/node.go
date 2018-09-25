@@ -111,7 +111,7 @@ func (node *Node) Get(k storage.RecordID) ([]byte, error) {
 
 	if item, ok := node.data[k]; ok {
 		return item, nil
-	} else {
-		return nil, storage.ErrRecordNotFound
 	}
+
+	return nil, storage.ErrRecordNotFound
 }
