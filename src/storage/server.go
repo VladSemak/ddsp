@@ -12,7 +12,7 @@ import (
 	"storage/pb"
 )
 
-const Timeout = time.Second
+const Timeout = 5*time.Second
 
 type Storage interface {
 	Put(k RecordID, d []byte) error
